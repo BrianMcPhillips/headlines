@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading component renders Loading 1`] = `
+<DocumentFragment>
+  <div>
+    <img
+      alt="Loading"
+      src="https://www.animatedimages.org/data/media/152/animated-newspaper-image-0026.gif"
+    />
+  </div>
+</DocumentFragment>
+`;
