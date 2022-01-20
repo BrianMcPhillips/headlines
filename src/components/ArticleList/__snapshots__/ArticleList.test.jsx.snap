@@ -19,7 +19,7 @@ exports[`ArticleList component renders ArticleList 1`] = `
           Best Article Writer
         </p>
         <a
-          href="http://bestarticle.com"
+          href="https://www.bestarticle.com"
         >
           View Article
         </a>

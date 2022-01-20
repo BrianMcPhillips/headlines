@@ -11,7 +11,7 @@ describe('ArticleList component', () => {
         title: 'Best Article',
         description: 'The best article',
         author: 'Best Article Writer',
-        url: 'http://bestarticle.com'
+        url: 'https://www.bestarticle.com'
       }
     ]}
     />);
