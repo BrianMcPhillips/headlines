@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Headlines from './Headlines';
 import { getArticles } from '../services/news-api.js';
 
@@ -47,6 +47,8 @@ describe('Headlines component', () => {
     ]);      
 
     render(<Headlines />);
+    const submitButton = await screen.findByTestId('search-button');
+    await fireEvent.click(submitButton);
     const articleList = await screen.findByTestId('articles');
 
     expect(articleList).not.toBeEmptyDOMElement();

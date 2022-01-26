@@ -1,6 +1,6 @@
-export const getArticles = () => {
+export const getArticles = (term) => {
   // eslint-disable-next-line max-len
-  return fetch(`https://newsapi.org/v2/everything?q=America&apiKey=${process.env.REACT_APP_TOKEN}`)
+  return fetch(`https://newsapi.org/v2/everything?q=${term}&apiKey=${process.env.REACT_APP_TOKEN}`)
     .then(res => res.json())
     .then(json => json.articles.map(article => ({
       urlToImage: article.urlToImage,
