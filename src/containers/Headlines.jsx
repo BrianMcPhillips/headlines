@@ -20,9 +20,8 @@ export default class Headlines extends Component {
     this.setState({ searchTerm: target.value });
   }
 
-  onSubmit = e => {
+  handleSubmit = e => {
     e.preventDefault();
-    this.setState({ loading: true });
     getArticles(this.state.searchTerm)
       .then(articles => this.setState({ articles, loading: false }));
   }

@@ -14,7 +14,9 @@ exports[`Search component renders Search 1`] = `
         type="text"
         value="searching"
       />
-      <button>
+      <button
+        data-testid="search-button"
+      >
         Find Articles
       </button>
     </form>
