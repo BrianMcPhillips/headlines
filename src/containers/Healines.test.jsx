@@ -28,7 +28,7 @@ describe('Headlines component', () => {
     screen.getByAltText('Loading');
   });
 
-  it('displays a list of headlines', () => {
+  it('displays a list of headlines', async() => {
     getArticles.mockResolvedValue([
       {
         urlToImage: 'http://placeholder.com/villager',
@@ -46,7 +46,10 @@ describe('Headlines component', () => {
       }
     ]);      
 
+    render(<Headlines />);
+    const articleList = await screen.findByTestId('articles');
 
+    expect(articleList).not.toBeEmptyDOMElement();
   });
 });
 

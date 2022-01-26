@@ -9,7 +9,7 @@ const ArticleList = ({ data }) => {
     </li>
   ));
   return (
-    <ul>
+    <ul data-testid="articles">
       {articleElements }
     </ul>
   );
