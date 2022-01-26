@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ArticleList from '../components/ArticleList/ArticleList';
 import Loading from '../components/Loading/Loading';
+import { getArticles } from '../services/news-api';
 
 export default class Headlines extends Component {
   state = {
@@ -9,15 +10,7 @@ export default class Headlines extends Component {
   }
 
   componentDidMount = () => {
-    fetch(`https://newsapi.org/v2/everything?q=America&apiKey=${process.env.REACT_APP_TOKEN}`)
-      .then(res => res.json())
-      .then(json => json.articles.map(article => ({
-        urlToImage: article.urlToImage,
-        title: article.title,
-        description: article.description,
-        author: article.author,
-        url: article.url
-      })))
+    getArticles()
       .then(articles => this.setState({ articles, loading: false })); 
   }
   render() {
