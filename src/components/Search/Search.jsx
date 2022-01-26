@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Search = ({ searchTerm, handleSearch }) => (
+const Search = ({ searchTerm, handleSearch, handleSubmit }) => (
   <div>
-    <form>
+    <form onSubmit={handleSubmit}>
       <label htmlFor="text-control">Search</label>
       <input 
         type="text"
@@ -18,7 +18,8 @@ const Search = ({ searchTerm, handleSearch }) => (
 
 Search.propTypes = {
   searchTerm: PropTypes.string.isRequired,
-  handleSearch: PropTypes.func.isRequired
+  handleSearch: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
 };
 
 export default Search;
